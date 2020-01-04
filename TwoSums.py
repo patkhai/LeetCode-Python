@@ -18,6 +18,6 @@ def TwoSum(nums, target):
 num = [2,7,11,15]
 target = 18 
 
-#return [7,11]
+#return [0,1] #indexs = 2, 7 
 print(BruteForceTWOSUM(num,target))
 print(TwoSum(num,target))

@@ -1,5 +1,4 @@
-def binarySearch(nums, target): 
-    res = 0     
+def binarySearch(nums, target):     
     left, right = 0,len(nums) - 1 
     while left <= right: 
         mid = (left + right) // 2

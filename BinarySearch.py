@@ -1,3 +1,4 @@
+#O(log(n)), space O(1)
 def binarySearch(nums, target):     
     left, right = 0,len(nums) - 1 
     while left <= right: 

@@ -27,7 +27,7 @@ def TwoSum_enumerate(nums, target):
 num = [2,7,11,15]
 target = 18 
 
-#return [0,1] #indexs = 2, 7 
+#return [1,2] #indexs = 7, 11 
 print(BruteForceTWOSUM(num,target))
 print(TwoSum_enumerate(num,target))
 print(TwoSum(num,target))

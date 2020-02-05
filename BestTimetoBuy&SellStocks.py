@@ -1,4 +1,4 @@
-#O(n^2), space O(1)
+#O(n^2), space O(n)
 def maxProfit_BruteForce(prices):
     maxProfit = 0 
     for i in range(len(prices)): 
@@ -22,10 +22,21 @@ def maxProfit(prices):
     
     return profit  
 
+#O(n) space 0(1)
+def maxProfit2(prices): 
+    profit,low = 0, float('inf') 
+    for curr_price in prices: 
+        if curr_price < low: 
+            low = curr_price 
+        else: 
+            profit = max(curr_price-low,profit)
+    return profit
+
 p = [7,1,5,3,6,4]
 #return 5 since its the maxprofit
 print(maxProfit(p)) 
 print(maxProfit_BruteForce(p))
+print(maxProfit2(p))
 
 ''' 
 check if there are prices in the list

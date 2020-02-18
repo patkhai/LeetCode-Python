@@ -25,7 +25,21 @@ def firstUniqChar(s):
             continue 
         res = min(res, val) 
     return res if res != float('inf') else -1
+
+def firstUniqChar1(s): 
+    dic = {} 
+    res = [] 
+
+    for index, item in enumerate(s): 
+        if item not in dic: 
+            dic[item] = index
+            res.append(item)
+        else: 
+            if item in res: 
+                res.remove(item)
+    return dic[res[0]] if res else -1
       
         
 s = "loveleetcode" #2
 print(firstUniqChar(s))
+print(firstUniqChar1(s))

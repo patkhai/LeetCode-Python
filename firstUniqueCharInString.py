@@ -35,7 +35,7 @@ def firstUniqChar1(s):
             dic[item] = index
             res.append(item)
         else: 
-            if item in res: 
+            if item in res:  
                 res.remove(item)
     return dic[res[0]] if res else -1
       

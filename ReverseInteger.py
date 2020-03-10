@@ -15,7 +15,7 @@ Output: 0
 
 ''' 
 
-# O(n), space O(1)
+# O(log(x)), space O(1)
 
 def reverse(x):
     reverse = 0 
@@ -36,6 +36,7 @@ def reverse(x):
         return 0 
     
     return reverse 
+
 
 print(reverse(123)) # 321
 print(reverse(-123)) # -321

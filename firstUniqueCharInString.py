@@ -10,21 +10,20 @@ s = "loveleetcode",
 return 2.
 '''
 
-#O(N*M) O(M) space
+#O(N) O(N) space
 
 def firstUniqChar(s): 
-    dic = {} 
-    for i,char in enumerate(s): 
-        if char in dic: 
-            dic[char] = -1 
-        else: 
-            dic[char] = i 
-    res = float('inf') 
-    for key, val in dic.items(): 
-        if val == -1: 
-            continue 
-        res = min(res, val) 
-    return res if res != float('inf') else -1
+    dic = {}    
+    for v in s: 
+        if v in dic:
+            dic[v] += 1
+        else:
+            dic[v] = 1 
+            
+    for i, v in enumerate(s):
+        if dic[v] == 1:
+            return i
+    return -1 
 
 def firstUniqChar1(s): 
     dic = {} 

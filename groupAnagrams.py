@@ -17,17 +17,16 @@ Output:
 #O(nlogn) O(nk)
 def groupAnagrams(strs):
     result_dict = {}
-    for s in strs:
-        s_list = list(s)
-        s_list.sort()
-        key = "".join(s_list)
-        if key in result_dict.keys():
-            result_dict[key].append(s)
-        else:
-            result_dict[key] = [s]
-    result = []
-    for k in result_dict.keys():
-        result.append(result_dict[k])
-    return result
+    
+    for s in strs: 
+        key = ''.join(sorted(s))
 
-print(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+        if key not in result_dict: 
+            result_dict[key] = [s]
+        else: 
+            result_dict[key] += [s]
+
+    return list(result_dict.values())
+
+
+print(groupAnagrams(["car", "tree", "boy", "girl", "arc"]))

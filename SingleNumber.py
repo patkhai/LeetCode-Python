@@ -18,6 +18,20 @@ Output: 4
 
 #O(n)
 
+def singleNumber0(nums):
+    dic = {}
+    for i in nums: 
+        if i not in dic: 
+            dic[i] = 0    
+        dic[i] += 1
+
+    for key in dic.keys(): 
+        if dic[key] == 1: 
+            return key 
+
+
+print(singleNumber0([4,1,2,1,2]))
+
 def singleNumber(s): 
     seen = set() 
     
@@ -28,6 +42,7 @@ def singleNumber(s):
             seen.remove(i)
     return str(seen).replace("{","").replace("}","")
 
+#O(1) space
 def singleNumber2(s): 
     a = 0 
     

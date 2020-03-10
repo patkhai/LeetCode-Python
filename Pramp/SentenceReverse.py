@@ -17,7 +17,7 @@ output: [ 'p', 'r', 'a', 'c', 't', 'i', 'c', 'e', '  ',
 
 """
 
-#O(N) O(1)
+#O(N) O(N)
 
 def reverse_words(arr):
   s_spaces = []

@@ -23,9 +23,10 @@ def encodeString(pattern,s):
         return False
         
     for i in range(len(pattern)):
-        if pattern[i] not in d.keys():
+        if pattern[i] not in d:
             d[pattern[i]] = s[i]
         else:
+            print(d[pattern[i]])
             if d[pattern[i]] != s[i]:
                 return False 
     return True

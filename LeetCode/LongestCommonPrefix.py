@@ -23,16 +23,17 @@ All given inputs are in lowercase letters a-z.
 #O(N) 
 
 def longestCommonPrefix(s): 
-    res = []
+    res = ""
     # Create one iterator per string using zip, it will stop at the shortest string
     # s is a tuple of characters at current position for each string
     # create a set to test unicity
+    
     for i in zip(*s): 
         if len(set(i)) != 1: 
-            break 
-        res.append(i[0])
-    return "".join(res)
-      
+            return res 
+        res += i[0]
+    return s
+  
         
 s = ["flower","fleet","flat"] #fl
 print(longestCommonPrefix(s))

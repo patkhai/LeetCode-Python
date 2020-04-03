@@ -22,8 +22,7 @@ Output: "One Billion Two Hundred Thirty Four Million Five Hundred Sixty Seven Th
 
 # O(1) O(1) cuz fixed
 def numtoWord(num): 
-    to19 = 'One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve ' \
-           'Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split()
+    to19 = 'One Two Three Four Five Six Seven Eight Nine Ten Eleven Twelve Thirteen Fourteen Fifteen Sixteen Seventeen Eighteen Nineteen'.split()
     tens = 'Twenty Thirty Forty Fifty Sixty Seventy Eighty Ninety'.split()
     thousand = 'Thousand Million Billion'.split()
     
@@ -38,7 +37,10 @@ def numtoWord(num):
             return [to19[num//100-1]] + ['Hundred'] + word(num%100)
 
         p, r = num//1000, num%1000
-        space = [thousand[idx]] if p % 1000 !=0 else []
+        if p % 1000 !=0: 
+            space = [thousand[idx]] 
+        else:
+            space = []
         return  word(p, idx+1) + space + word(r)
     return ' '.join(word(num)) or 'Zero'
 

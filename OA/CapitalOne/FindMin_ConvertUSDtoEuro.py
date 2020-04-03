@@ -18,34 +18,29 @@ while remaining value is greater than 0
 2. find the larget demonimation that is smaller than amount 
 3. add found deno to result
 subtract value fo found deno from value 
-4. if v becomes - then print result 
+4. if v becomes 0 - then print result 
 else repat steps 2 and 3 for new value of v 
 
 input: v = 30 (US dollars)
 output: 
 
 
-''' 
+'''
 #O(N) or O(dollar_amount)
-def convertCurrency(dollar_amount,rate): 
-    deno = [0.01,0.02,0.05,0.1,0.25,0.5,1,2,5,10,20,50,100,200,500]
 
-    n = len(deno)
 
+def convertCurrency(dollar_amount, rate):
+    deno = [0.01, 0.02, 0.05, 0.1, 0.25, 0.5,
+            1, 2, 5, 10, 20, 50, 100, 200, 500]
     res = []
-
-    i = n - 1
-
+    i = len(deno) - 1
     dollar_amount /= rate
-
-    while i >= 0: 
+    while i >= 0:
         while dollar_amount >= deno[i]:
-            dollar_amount -= deno[i] 
+            dollar_amount -= deno[i]
             res.append(deno[i])
-        i -= 1 
-    return res 
+        i -= 1
+    return res
 
-print(convertCurrency(30,1.10285))
-
-
+print(convertCurrency(30, 1.10285))  # [20, 5, 2, 0.1, 0.1]
 

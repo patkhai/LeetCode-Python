@@ -32,4 +32,4 @@ def containDuplicates(nums):
             
 s = [2,7,11,2] #True 
 d = [0] #false 
-print(containDuplicates(s))        
+print(containDuplicates(d))        

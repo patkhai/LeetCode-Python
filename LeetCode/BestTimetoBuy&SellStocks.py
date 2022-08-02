@@ -56,8 +56,8 @@ def maxProfit2(prices):
 
 p = [7,1,5,3,6,4]
 #return 5 since its the maxprofit
-print(maxProfit(p)) 
-print(maxProfit_BruteForce(p))
+#print(maxProfit(p)) 
+#print(maxProfit_BruteForce(p))
 print(maxProfit2(p))
 
 ''' 

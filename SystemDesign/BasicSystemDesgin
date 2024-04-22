@@ -1,0 +1,35 @@
+1. Understand the problem and Define Design Scope ( 11- 15 minutes)
+   Specific Features ( max 4 features)
+
+   Practical Estimates (numerical)( Users, resources etc)
+
+   Tech Stack
+
+   Scaling requirements ( say for x months)
+
+2. Discuss High level Design, trade offs and take feedback from interviewer ( 15 minutes)
+   Basic Blueprint
+
+   Key Resources and services
+
+   Use cases
+
+   Feedback from the interviewer
+
+3. Go in depth of the proposed solution — high level coding( 15 minutes)
+   Identify important components in the proposed architecture
+
+   Resources and scaling estimations ( calculations to meet the scaling requirements)
+
+   API Design
+
+   Database schema
+
+4. Discuss the bottle necks, refinements, improvements etc ( 7–10 minutes)
+   System Bottlenecks and failure/error points
+
+   Operational metrics and issues
+
+   Refinements
+
+   Future of your proposed solution
